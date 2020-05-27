@@ -32,7 +32,7 @@ const App = () => (
     />
     <Route
       exact
-      path="/conact"
+      path="/contact"
       render={() => (
         <Contact />
       )}
