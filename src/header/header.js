@@ -51,6 +51,8 @@ const DecalBox = styled('div', {
   top: 0,
   right: 0,
   position: 'absolute',
+  marginTop: '12%',
+  marginRight: '3%',
   display: 'flex',
 });
 
@@ -67,10 +69,9 @@ const DecalSticker = styled('img', {
 });
 
 const QRPlace = styled('img', {
-  marginTop: '80%',
   position: 'absolute',
-  float: 'left',
-  marginLeft: '-15%',
+  marginTop: '100%',
+  marginLeft: '5%',
   top: 0,
   ':hover': {
     cursor: 'pointer',
