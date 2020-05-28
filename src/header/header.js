@@ -1,63 +1,103 @@
 import React from 'react';
-import { styled } from 'styletron-react';
-import IconImg from '../images/icon.png';
+import { styled, withStyle } from 'styletron-react';
+import ComicPhotoCover from '../images/gc.png';
+import FirstApp from '../images/sticker.png';
+import PriceQR from '../images/comicPurchase.png';
 import { ReactComponent as DownArrow } from '../images/down-arrow.svg';
 import NavBar from '../nav/navbar';
 
 const HeaderContainer = styled('div', {
-  minHeight: '100%',
-  height: '100%',
   width: '100%',
-  position: 'fixed',
-  // backgroundImage: `url(${BackgroundImg})`,
-  // backgroundColor: '#87CEEB',
-  // backgroundColor: '#00628B',
-  backgroundColor: '#9CC5C9',
-  backgroundPosition: 'center',
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  display: 'block',
+  position: 'relative',
+  maxHeight: '100%',
 });
 
-const IconStyle = styled('img', {
+const ImgBackground = styled('img', {
+  zIndex: 0,
+  top: 0,
+  width: '80%',
+  marginLeft: '10%',
+  marginTop: '15%',
+  justifyContent: 'center',
   position: 'absolute',
-  height: '200px',
-  width: '200px',
-  right: 0,
-  marginTop: '-11%',
-  marginRight: '25%',
-});
-
-const BouncingArrow = styled('div', {
-  height: '50px',
-  width: '50px',
-  zIndex: 3,
-  bottom: 0,
-  position: 'absolute',
-  left: '50%',
+  overflow: 'hidden',
 });
 
 const HeaderTextBox = styled('div', {
-  letterSpacing: '3px',
-  padding: '18px',
-  marginTop: '20%',
-  marginLeft: '15%',
+  top: 0,
+  left: '26%',
+  letterSpacing: '4px',
+  marginTop: '5%',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
 });
 
 const HeaderText = styled('div', {
   fontSize: '64px',
-  color: '#D5544f',
-  fontFamily: 'Orbitron',
-  // textShadow: '0px 0px 32px #000000',
+  color: 'white',
+  fontFamily: 'Bangers',
+  position: 'relative',
+  display: 'flex',
+  justifyContent: 'center',
 });
+
+const NameText = withStyle(HeaderText, {
+  fontSize: '136px',
+  textShadow: '0px 0px 32px #000000',
+});
+
+const DecalBox = styled('div', {
+  top: 0,
+  right: 0,
+  position: 'absolute',
+  display: 'flex',
+});
+
+const DecalSticker = styled('img', {
+  zIndex: 3,
+  position: 'absolute',
+  right: 0,
+  top: 0,
+  height: 'fit-content',
+  width: 'fit-content',
+  ':hover': {
+    cursor: 'pointer',
+  },
+});
+
+const QRPlace = styled('img', {
+  marginTop: '80%',
+  position: 'absolute',
+  float: 'left',
+  marginLeft: '-15%',
+  top: 0,
+  ':hover': {
+    cursor: 'pointer',
+  },
+});
+
+const qrClick = () => {
+  window.open('https://qrco.de/bbXWHc', '_blank').focus();
+};
+
+const comicCLick = () => {
+  window.open('https://drive.google.com/file/d/1BpLpQLxdJq9m4x3LzCzfYuvtEQBHtnMX/view', '_blank').focus();
+};
 
 const Header = () => (
   <HeaderContainer>
-    <NavBar />
+    <ImgBackground src={ComicPhotoCover} alt="Photo Stolen!" />
+    <QRPlace onClick={() => qrClick()} src={PriceQR} alt="Info Here" />
     <HeaderTextBox>
-      <HeaderText> Gilbert Curbelo </HeaderText>
+      <HeaderText>
+        Introducing:
+      </HeaderText>
+      <NameText> Gilbert Curbelo </NameText>
     </HeaderTextBox>
-    <IconStyle src={IconImg} alt="Me!" />
+    <DecalBox>
+      <DecalSticker onClick={() => comicCLick()} src={FirstApp} alt="1st Comic Book Appearance!" />
+    </DecalBox>
   </HeaderContainer>
 );
 

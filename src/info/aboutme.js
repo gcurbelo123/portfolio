@@ -12,6 +12,7 @@ const MyFace = styled('img', {
   width: '25%',
   height: '40%',
 });
+
 const AboutMe = () => (
   <MyHome>
     Hi! Thanks for coming!
