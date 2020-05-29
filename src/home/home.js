@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from 'styletron-react';
-import Header from '../header/header';
+import ComicBookCover from '../header/header';
 
 const HomePage = styled('div', {
   width: '100%',
@@ -28,7 +28,7 @@ const ComicBook = styled('div', {
 const Home = () => (
   <HomePage>
     <ComicBook>
-      <Header />
+      <ComicBookCover />
     </ComicBook>
   </HomePage>
 );

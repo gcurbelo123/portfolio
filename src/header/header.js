@@ -1,10 +1,9 @@
 import React from 'react';
 import { styled, withStyle } from 'styletron-react';
+import { useHistory } from 'react-router-dom';
 import ComicPhotoCover from '../images/gc.png';
 import FirstApp from '../images/sticker.png';
 import PriceQR from '../images/comicPurchase.png';
-import { ReactComponent as DownArrow } from '../images/down-arrow.svg';
-import NavBar from '../nav/navbar';
 
 const HeaderContainer = styled('div', {
   width: '100%',
@@ -78,28 +77,31 @@ const QRPlace = styled('img', {
   },
 });
 
-const qrClick = () => {
-  window.open('https://qrco.de/bbXWHc', '_blank').focus();
+const ComicBookCover = () => {
+  const history = useHistory();
+  const qrClick = () => {
+    window.open('https://qrco.de/bbXWHc', '_blank').focus();
+  };
+
+  const comicCLick = () => {
+    history.push('/bio');
+  };
+
+  return (
+    <HeaderContainer>
+      <ImgBackground src={ComicPhotoCover} alt="Photo Stolen!" />
+      <QRPlace onClick={() => qrClick()} src={PriceQR} alt="Info Here" />
+      <HeaderTextBox>
+        <HeaderText>
+          Introducing:
+        </HeaderText>
+        <NameText> Gilbert Curbelo </NameText>
+      </HeaderTextBox>
+      <DecalBox>
+        <DecalSticker onClick={() => comicCLick()} src={FirstApp} alt="1st Comic Book Appearance!" />
+      </DecalBox>
+    </HeaderContainer>
+  );
 };
 
-const comicCLick = () => {
-  window.open('https://drive.google.com/file/d/1BpLpQLxdJq9m4x3LzCzfYuvtEQBHtnMX/view', '_blank').focus();
-};
-
-const Header = () => (
-  <HeaderContainer>
-    <ImgBackground src={ComicPhotoCover} alt="Photo Stolen!" />
-    <QRPlace onClick={() => qrClick()} src={PriceQR} alt="Info Here" />
-    <HeaderTextBox>
-      <HeaderText>
-        Introducing:
-      </HeaderText>
-      <NameText> Gilbert Curbelo </NameText>
-    </HeaderTextBox>
-    <DecalBox>
-      <DecalSticker onClick={() => comicCLick()} src={FirstApp} alt="1st Comic Book Appearance!" />
-    </DecalBox>
-  </HeaderContainer>
-);
-
-export default Header;
+export default ComicBookCover;

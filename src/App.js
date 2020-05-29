@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './home/home';
-import AboutMe from './info/aboutme';
 import Projects from './info/projects';
 import Contact from './info/contact';
+import Bio from './info/bio';
 
 import './App.css';
 
@@ -18,9 +18,9 @@ const App = () => (
     />
     <Route
       exact
-      path="/about"
+      path="/bio"
       render={() => (
-        <AboutMe />
+        <Bio />
       )}
     />
     <Route
