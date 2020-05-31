@@ -1,6 +1,7 @@
 import React from 'react';
 import { styled } from 'styletron-react';
 import ComicBookCover from '../header/header';
+import Test from '../header/test';
 
 const HomePage = styled('div', {
   width: '100%',
