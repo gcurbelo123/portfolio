@@ -5,31 +5,38 @@ import ComicPhotoCover from '../images/gc.png';
 import FirstApp from '../images/sticker.png';
 import PriceQR from '../images/comicPurchase.png';
 
-const HeaderContainer = styled('div', {
+const CoverPage = styled('div', {
   width: '100%',
-  position: 'relative',
-  maxHeight: '100%',
+  minHeight: '100%',
+  position: 'fixed',
+  backgroundColor: 'black',
+  overflow: 'scroll',
+});
+
+const ComicBook = styled('div', {
+  width: '90%',
+  marginLeft: '5%',
+  position: 'absolute',
+  backgroundColor: '#003366',
+  display: 'flex',
+  justifyContent: 'center',
+  border: '1px solid white',
 });
 
 const ImgBackground = styled('img', {
   zIndex: 0,
   top: 0,
   width: '80%',
-  marginLeft: '10%',
   marginTop: '15%',
   justifyContent: 'center',
-  position: 'absolute',
-  overflow: 'hidden',
 });
 
 const HeaderTextBox = styled('div', {
   top: 0,
-  left: '26%',
+  position: 'absolute',
   letterSpacing: '4px',
   marginTop: '5%',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
+  textAlign: 'center',
 });
 
 const HeaderText = styled('div', {
@@ -50,7 +57,7 @@ const DecalBox = styled('div', {
   top: 0,
   right: 0,
   position: 'absolute',
-  marginTop: '12%',
+  marginTop: '25%',
   marginRight: '3%',
   display: 'flex',
 });
@@ -71,6 +78,7 @@ const QRPlace = styled('img', {
   position: 'absolute',
   marginTop: '100%',
   marginLeft: '5%',
+  left: 0,
   top: 0,
   ':hover': {
     cursor: 'pointer',
@@ -88,19 +96,21 @@ const ComicBookCover = () => {
   };
 
   return (
-    <HeaderContainer>
-      <ImgBackground src={ComicPhotoCover} alt="Photo Stolen!" />
-      <QRPlace onClick={() => qrClick()} src={PriceQR} alt="Info Here" />
-      <HeaderTextBox>
-        <HeaderText>
-          Introducing:
-        </HeaderText>
-        <NameText> Gilbert Curbelo </NameText>
-      </HeaderTextBox>
-      <DecalBox>
-        <DecalSticker onClick={() => comicCLick()} src={FirstApp} alt="1st Comic Book Appearance!" />
-      </DecalBox>
-    </HeaderContainer>
+    <CoverPage>
+      <ComicBook>
+        <ImgBackground src={ComicPhotoCover} alt="Photo Stolen!" />
+        <QRPlace onClick={() => qrClick()} src={PriceQR} alt="Info Here" />
+        <HeaderTextBox>
+          <HeaderText>
+            Introducing:
+          </HeaderText>
+          <NameText> Gilbert Curbelo </NameText>
+        </HeaderTextBox>
+        <DecalBox>
+          <DecalSticker onClick={() => comicCLick()} src={FirstApp} alt="1st Comic Book Appearance!" />
+        </DecalBox>
+      </ComicBook>
+    </CoverPage>
   );
 };
 
