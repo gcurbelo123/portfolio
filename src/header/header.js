@@ -45,6 +45,29 @@ const ComicBanner = styled.div`
   border-top: 1px solid black;
 `;
 
+const Flame = keyframes`
+  0% {height:150px; width:150px;}
+  50% {height:140px; width:140px;}
+  100% {height:150px; width:150px;}
+`;
+
+const BoxFlame = styled.div`
+  display: none;
+  width: 100px;
+  height: 100px;
+  left: 0;
+  top: 0;
+  margin-left: 1%;
+  margin-top: 10%;
+  position: absolute;
+  background: linear-gradient(-45deg, red, orange);
+  border-radius: 100px 100px 0px 0px;
+  filter: blur(10px);
+  box-shadow: 17px 20px 90px #700;
+  border: 40px solid black;
+  animation: 1s ${Flame} infinite;
+`;
+
 const ComicBannerBox = styled.div`
   left: 0;
   top: 0;
@@ -57,6 +80,12 @@ const ComicBannerBox = styled.div`
   display: flex;
   justify-content: center;
   z-index: 1;
+  &:hover + ${BoxFlame} {
+    display: block;
+    /* background: linear-gradient(-45deg, red, orange);
+    border-radius: 100px 100px 100px 100px;
+    box-shadow: 17px 20px 90px #700; */
+  }
 `;
 
 const Published = styled.div`
@@ -130,6 +159,18 @@ const NameText = styled.div`
   animation: 1.5s ${nameEnter} forwards;
 `;
 
+const Pulse = keyframes`
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+`;
+
 const DecalBox = styled.div`
   top: 0;
   right: 0;
@@ -137,6 +178,8 @@ const DecalBox = styled.div`
   margin-top: 25%;
   margin-right: 3%;
   display: flex;
+  transform: scale(1);
+  animation: 1s ${Pulse} infinite;
 `;
 
 const DecalSticker = styled.img`
@@ -147,7 +190,6 @@ const DecalSticker = styled.img`
   height: fit-content;
   width: fit-content;
   &:hover {
-
     cursor: pointer;
   }
 `;
@@ -208,6 +250,7 @@ const ComicBookCover = () => {
           <Published> Published By: </Published>
           <Publisher src={PubIcon} alt="GC" />
         </ComicBannerBox>
+        <BoxFlame />
         <ComicBanner>
           <No1> Issue #1 </No1>
           <DoB> 05/05/1998 </DoB>

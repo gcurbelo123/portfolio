@@ -147,6 +147,15 @@ const AboutMe = () => {
           cursor: 'help',
           help: 'SQL - Used in programming and designed for managing data held in a relational database',
         },
+        {
+          y: 6,
+          indexLabel: 'Java - Intermediate',
+          indexLabelFontColor: 'black',
+          indexLabelPlacement: 'inside',
+          color: 'orange',
+          cursor: 'help',
+          help: 'Java - Used for application development and deployment',
+        },
       ],
     }],
   };
