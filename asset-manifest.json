@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.5f361e03.chunk.css",
+    "main.js": "/portfolio/static/js/main.80cf495a.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.80cf495a.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.fb1b3dac.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.fb1b3dac.js.map",
+    "static/js/2.6f3a5a39.chunk.js": "/portfolio/static/js/2.6f3a5a39.chunk.js",
+    "static/js/2.6f3a5a39.chunk.js.map": "/portfolio/static/js/2.6f3a5a39.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.023d0550bbaa6d5203763c2b74ee8b61.js": "/portfolio/precache-manifest.023d0550bbaa6d5203763c2b74ee8b61.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/portfolio/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.6f3a5a39.chunk.js.LICENSE.txt": "/portfolio/static/js/2.6f3a5a39.chunk.js.LICENSE.txt",
+    "static/media/biopic.jpg": "/portfolio/static/media/biopic.79d5dcf4.jpg",
+    "static/media/comicPurchase.png": "/portfolio/static/media/comicPurchase.05e2ebd5.png",
+    "static/media/family.jpg": "/portfolio/static/media/family.81765afe.jpg",
+    "static/media/gc.png": "/portfolio/static/media/gc.1e914865.png",
+    "static/media/grad.jpg": "/portfolio/static/media/grad.826c2b09.jpg",
+    "static/media/matsui.jpg": "/portfolio/static/media/matsui.77d987f6.jpg",
+    "static/media/pub-icon.png": "/portfolio/static/media/pub-icon.a5efbf1e.png",
+    "static/media/react.png": "/portfolio/static/media/react.dc7eefd3.png",
+    "static/media/right-arrow.svg": "/portfolio/static/media/right-arrow.be237328.svg",
+    "static/media/sticker-dark.png": "/portfolio/static/media/sticker-dark.68fce082.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fb1b3dac.js",
+    "static/js/2.6f3a5a39.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.80cf495a.chunk.js"
+  ]
+}
