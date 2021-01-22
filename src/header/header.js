@@ -190,7 +190,7 @@ const NextPage = styled.div`
 const ComicBookCover = () => {
   const history = useHistory();
   const qrClick = () => {
-    window.open('https://qrco.de/bbXWHc', '_blank').focus();
+    window.open('https://docs.google.com/document/d/1SWUfe2ZFaDBt7_oup8aXLF3127N2afvcR1-5ZlDE99Q/edit?usp=sharing', '_blank').focus();
   };
 
   const comicCLick = () => {
